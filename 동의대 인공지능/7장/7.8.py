@@ -6,16 +6,13 @@ if num > 10 or num < 1:
         if num >= 1 and num <= 10:
             break
 
-numbers = list(range(num*num))
-print(numbers, 'li')
+numbers = list(range(1, num*num+1))
 
+j = 0
 for i in range(num):
-    if i == 0:
-        print('0번째')    
+    if i % 2 == 0:
+        print('  '.join(map(str, numbers[j:j+num])), end = ' ') 
     else:
-        count += 1
-        for j in range(num):
-            if i % 2 == 0:
-                print('짝수 : ', numbers[j]+1, end = ' ')       
-            else:
-                print('홀수: ', numbers[num * count + 1:num * (count+1):1], end = ' ')
+        print('  '.join(map(str, numbers[j+(num-1):j-1:-1])), end = ' ') 
+    j = j + num 
+    print()

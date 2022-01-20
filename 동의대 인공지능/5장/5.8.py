@@ -4,12 +4,12 @@ while 1:
         num1 = (num[::-1])
 
         if num1 == num:
-            print(f'{num}은 거꾸로 정수입니다.')
+            print(f'{num}은 거꾸로 정수입니다.\n')
         else:
-            if num == '-99':
-                print('프로그램을 종료합니다.')
-                break
-            else:
-                print(f'{num}은 거꾸로 정수가 아닙니다.')
+            print(f'{num}은 거꾸로 정수가 아닙니다.\n')
     else: 
-        print('잘못된 수입니다.')
+        if num == '-99':
+            print('프로그램을 종료합니다.')
+            break
+        else:
+            print('잘못된 수입니다.\n')
